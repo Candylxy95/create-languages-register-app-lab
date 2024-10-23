@@ -11,7 +11,7 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<Display />} />
-        <Route path="/user-list" element={<Profile />} />
+        <Route path="/sign-up" element={<Profile />} />
         <Route path="*" element={<h1>You've strayed. Head back</h1>} />
       </Routes>
     </div>

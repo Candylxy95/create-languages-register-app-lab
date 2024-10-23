@@ -1,9 +1,10 @@
 import React from "react";
+import styles from "./Userprofile.module.css";
 
 const AddProfile = (props) => {
   return (
-    <div>
-      <h3>Add a profile</h3>
+    <div className={styles.form}>
+      <h1 style={{ fontFamily: "Tourney" }}>Join our 5 Users today</h1>
       <div className="container row">
         <div className="col-md-3">
           <label htmlFor="name">Name: </label>
@@ -31,7 +32,10 @@ const AddProfile = (props) => {
         </div>
         <div className="col-md-1"></div>
         <div className="col-md-3">
-          <button onClick={props.addUsers}>Submit</button>
+          <div className="mb-4"></div>
+          <button className={styles.profilebtn} onClick={props.addUsers}>
+            Submit
+          </button>
         </div>
       </div>
     </div>

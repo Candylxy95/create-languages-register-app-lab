@@ -37,3 +37,16 @@
 .profilebtn:hover {
   background-color: orangered;
 }
+
+.addprofileform {
+  display: flex;
+  flex-direction: row;
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}

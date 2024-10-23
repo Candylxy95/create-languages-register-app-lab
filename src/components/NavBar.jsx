@@ -8,17 +8,12 @@ const NavBar = () => {
       <ul className={styles.ul}>
         <li>
           <Link to="/" className={styles.li}>
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link to="/user-list" className={styles.li}>
-            See who's learning
+            See what's trending
           </Link>
         </li>
         <li>
           <Link to="/sign-up" className={styles.li}>
-            Join us
+            Join us today
           </Link>
         </li>
       </ul>

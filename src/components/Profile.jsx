@@ -63,7 +63,14 @@ const Profile = () => {
   }, []); //run on mount
 
   return (
-    <div>
+    <div className={styles.help}>
+      <AddProfile
+        nameRef={nameRef}
+        ageRef={ageRef}
+        countryRef={countryRef}
+        addUsers={addUsers}
+      />
+      <div className="mb-4"></div>
       <h1 className="text-center">USER PROFILE</h1>
       <div className={styles.container}>
         {users.map((user) => {
@@ -79,12 +86,6 @@ const Profile = () => {
             />
           );
         })}
-        {/* <AddProfile
-          nameRef={nameRef}
-          ageRef={ageRef}
-          countryRef={countryRef}
-          addUsers={addUsers}
-        /> */}
       </div>
     </div>
   );

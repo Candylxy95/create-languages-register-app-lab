@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import styles from "./Userprofile.module.css";
 
 const LanguageSelection = (props) => {
   const [languages, setLanguages] = useState([]);
@@ -42,7 +43,7 @@ const LanguageSelection = (props) => {
 
   useEffect(() => {
     getData();
-  }, []);
+  }, [languages]);
 
   return (
     <>
@@ -55,7 +56,10 @@ const LanguageSelection = (props) => {
           );
         })}
       </select>
-      <button onClick={addUserLanguage}>Add</button>
+      <br />
+      <button onClick={addUserLanguage} className={styles.petitbtn}>
+        Add
+      </button>
     </>
   );
 };

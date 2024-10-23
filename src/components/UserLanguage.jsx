@@ -52,6 +52,7 @@ const UserLanguage = (props) => {
     } catch (error) {
       console.error(error.message);
     }
+    getUserLanguages();
   };
 
   useEffect(() => {
@@ -64,9 +65,10 @@ const UserLanguage = (props) => {
       <p className={styles.boldfont}>Currently Learning</p>
       {userLanguages.map((userLanguage, idx) => {
         return (
-          <div className={styles.languagelist}>
-            <p key={idx}>{userLanguage} </p>
+          <div key={idx} className={styles.languagelist}>
+            {userLanguage}
             <button
+              type="button"
               onClick={() => delUserLanguage(idx)}
               className={styles.petitbtn}
             >

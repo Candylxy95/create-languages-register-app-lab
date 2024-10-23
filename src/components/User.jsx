@@ -40,10 +40,11 @@ const User = (props) => {
             Update Profile
           </button>
         </div>
-        <p className={styles.boldfont}>
+        <div className="mb-4"></div>
+        <div className={styles.boldfont}>
           Add a new language: <LanguageSelection id={props.id} />
           <UserLanguage id={props.id} />
-        </p>
+        </div>
       </div>
     </>
   );
