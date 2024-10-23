@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./Button.module.css";
 
 const Language = (props) => {
   return (
@@ -8,7 +9,7 @@ const Language = (props) => {
           {props.language}
         </p>
         <button
-          className="mb-3"
+          className={styles.btn}
           onClick={() => props.delLanguage(props.language)}
         >
           Delete

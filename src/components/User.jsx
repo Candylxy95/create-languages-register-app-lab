@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import UpdateModal from "./UpdateModal";
 import UserLanguage from "./UserLanguage";
 import LanguageSelection from "./LanguageSelection";
+import styles from "./Userprofile.module.css";
 
 const User = (props) => {
   const [showUpdateModal, setShowUpdateModal] = useState(false);
@@ -18,22 +19,31 @@ const User = (props) => {
           setShowUpdateModal={setShowUpdateModal}
         />
       )}
-      <div key={props.id} id={props.id}>
+      <div key={props.id} id={props.id} className={styles.profileBox}>
+        <div className="mb-4"></div>
         <h4>{props.name}</h4>
         <p>Age: {props.age}</p>
         <p>Country: {props.country}</p>
-        <h5>
-          Known Languages: <LanguageSelection id={props.id} />
+        <div className="d-flex justify-content-evenly">
+          <button
+            onClick={() => props.deleteUsers(props.id)}
+            className={styles.profilebtn}
+          >
+            Remove User
+          </button>
+          <button
+            onClick={() => {
+              setShowUpdateModal(true);
+            }}
+            className={styles.profilebtn}
+          >
+            Update Profile
+          </button>
+        </div>
+        <p className={styles.boldfont}>
+          Add a new language: <LanguageSelection id={props.id} />
           <UserLanguage id={props.id} />
-        </h5>
-        <button onClick={() => props.deleteUsers(props.id)}>Remove User</button>
-        <button
-          onClick={() => {
-            setShowUpdateModal(true);
-          }}
-        >
-          Update Profile
-        </button>
+        </p>
       </div>
     </>
   );

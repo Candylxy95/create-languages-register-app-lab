@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import User from "./User";
+import styles from "./Userprofile.module.css";
+import AddProfile from "./AddProfile";
 
 const Profile = () => {
   const [users, setUsers] = useState([]);
@@ -62,48 +64,60 @@ const Profile = () => {
 
   return (
     <div>
-      <h1>USER PROFILE</h1>
-      {users.map((user) => {
-        return (
-          <User
-            key={user.id}
-            id={user.id}
-            name={user.name}
-            age={user.age}
-            country={user.country}
-            getData={getData}
-            deleteUsers={deleteUsers}
-          />
-        );
-      })}
-      <h3>Add a profile</h3>
-      <div className="container row">
-        <div className="col-md-3">
-          <label htmlFor="name">Name: </label>
-          <input type="text" name="name" placeholder="Name" ref={nameRef} />
-        </div>
-        <div className="col-md-1"></div>
-        <div className="col-md-3">
-          <label htmlFor="Age">Age: </label>
-          <input type="text" name="age" placeholder="Age" ref={ageRef} />
-        </div>
-        <div className="col-md-1"></div>
-        <div className="col-md-3">
-          <label htmlFor="Country">Country: </label>
-          <input
-            type="text"
-            name="country"
-            placeholder="Country"
-            ref={countryRef}
-          />
-        </div>
-        <div className="col-md-1"></div>
-        <div className="col-md-3">
-          <button onClick={addUsers}>Submit</button>
-        </div>
+      <h1 className="text-center">USER PROFILE</h1>
+      <div className={styles.container}>
+        {users.map((user) => {
+          return (
+            <User
+              key={user.id}
+              id={user.id}
+              name={user.name}
+              age={user.age}
+              country={user.country}
+              getData={getData}
+              deleteUsers={deleteUsers}
+            />
+          );
+        })}
+        {/* <AddProfile
+          nameRef={nameRef}
+          ageRef={ageRef}
+          countryRef={countryRef}
+          addUsers={addUsers}
+        /> */}
       </div>
     </div>
   );
 };
+
+{
+  /* <h3>Add a profile</h3>
+        <div className="container row">
+          <div className="col-md-3">
+            <label htmlFor="name">Name: </label>
+            <input type="text" name="name" placeholder="Name" ref={nameRef} />
+          </div>
+          <div className="col-md-1"></div>
+          <div className="col-md-3">
+            <label htmlFor="Age">Age: </label>
+            <input type="text" name="age" placeholder="Age" ref={ageRef} />
+          </div>
+          <div className="col-md-1"></div>
+          <div className="col-md-3">
+            <label htmlFor="Country">Country: </label>
+            <input
+              type="text"
+              name="country"
+              placeholder="Country"
+              ref={countryRef}
+            />
+          </div>
+          <div className="col-md-1"></div>
+          <div className="col-md-3">
+            <button onClick={addUsers}>Submit</button>
+          </div>
+        </div>
+      </div> */
+}
 
 export default Profile;

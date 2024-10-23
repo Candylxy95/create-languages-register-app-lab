@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import styles from "./Userprofile.module.css";
 
 const UserLanguage = (props) => {
   const [userLanguages, setUserLanguages] = useState([]);
@@ -59,12 +60,20 @@ const UserLanguage = (props) => {
 
   return (
     <>
+      <div className="mb-5"></div>
+      <p className={styles.boldfont}>Currently Learning</p>
       {userLanguages.map((userLanguage, idx) => {
         return (
-          <p key={idx}>
-            {userLanguage}
-            <button onClick={() => delUserLanguage(idx)}>Delete</button>
-          </p>
+          <div className={styles.languagelist}>
+            <p key={idx}>{userLanguage} </p>
+            <button
+              onClick={() => delUserLanguage(idx)}
+              className={styles.petitbtn}
+            >
+              Remove
+            </button>
+            <div className="mb-4"></div>
+          </div>
         );
       })}
     </>

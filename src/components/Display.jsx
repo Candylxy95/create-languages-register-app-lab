@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import Language from "./Language";
+import styles from "./Button.module.css";
 
 const Display = () => {
   const [languages, setLanguages] = useState([]);
@@ -59,6 +60,10 @@ const Display = () => {
       <div className="container d-flex justify-content-center text-center">
         <div className="col-md-9 align-items-center">
           <h1>Trending Languages</h1>
+          <h3 style={{ fontStyle: "italic" }}>
+            What would you like to learn today?
+          </h3>
+          <br />
           {languages.map((language, idx) => {
             return (
               <Language
@@ -71,14 +76,21 @@ const Display = () => {
           })}
         </div>
       </div>
+      <br />
+      <div className="container text-center">
+        <p>
+          Got a language you want to learn? <br />
+          Contribute to our language list
+        </p>
+      </div>
       <div className="container text-center">
         <input
           type="text"
           ref={languageRef}
-          placeholder="Add a language"
+          placeholder="Add new language?"
           className="col-md-3"
         />
-        <button className="col-md-3" onClick={addLanguage}>
+        <button className={styles.btn} onClick={addLanguage}>
           Submit
         </button>
       </div>

@@ -1,0 +1,15 @@
+.btn {
+  background-color: rgb(25, 25, 25);
+  color: whitesmoke;
+  border-style: none;
+}
+
+.btn:hover {
+  background-color: orangered;
+}
+
+.petitbtn {
+  background-color: rgb(25, 25, 25);
+  color: whitesmoke;
+  border-style: none;
+}

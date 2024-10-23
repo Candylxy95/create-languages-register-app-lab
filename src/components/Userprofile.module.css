@@ -1,0 +1,39 @@
+.container {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.boldfont {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.profileBox {
+  border: solid 5px rgb(21, 21, 21);
+  align-items: center;
+  font-size: 20px;
+}
+
+.languagelist {
+  font-size: 20px;
+}
+
+.petitbtn {
+  background-color: rgb(25, 25, 25);
+  color: whitesmoke;
+  border-style: none;
+  font-size: 16px;
+}
+
+.profilebtn {
+  background-color: rgb(25, 25, 25);
+  color: whitesmoke;
+  border-style: none;
+  font-size: 18px;
+}
+
+.petitbtn:hover,
+.profilebtn:hover {
+  background-color: orangered;
+}
