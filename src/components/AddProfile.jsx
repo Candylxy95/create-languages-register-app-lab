@@ -11,18 +11,18 @@ const AddProfile = (props) => {
           <input
             type="text"
             name="name"
-            placeholder="Name"
+            placeholder="name"
             ref={props.nameRef}
           />
         </div>
         <div className="col-md-1"></div>
         <div className="col-md-3">
-          <label htmlFor="Age">Age: </label>
+          <label htmlFor="age">Age: </label>
           <input type="text" name="age" placeholder="Age" ref={props.ageRef} />
         </div>
         <div className="col-md-1"></div>
         <div className="col-md-3">
-          <label htmlFor="Country">Country: </label>
+          <label htmlFor="country">Country: </label>
           <input
             type="text"
             name="country"

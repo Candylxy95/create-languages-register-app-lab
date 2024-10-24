@@ -3,6 +3,7 @@ import UpdateModal from "./UpdateModal";
 import UserLanguage from "./UserLanguage";
 import LanguageSelection from "./LanguageSelection";
 import styles from "./Userprofile.module.css";
+import UserLanguageColumn from "./UserLanguageColumn";
 
 const User = (props) => {
   const [showUpdateModal, setShowUpdateModal] = useState(false);
@@ -42,8 +43,7 @@ const User = (props) => {
         </div>
         <div className="mb-4"></div>
         <div className={styles.boldfont}>
-          Add a new language: <LanguageSelection id={props.id} />
-          <UserLanguage id={props.id} />
+          Add a new language: <UserLanguageColumn id={props.id} />
         </div>
       </div>
     </>
@@ -51,3 +51,10 @@ const User = (props) => {
 };
 
 export default User;
+
+{
+  /* <div className={styles.boldfont}>
+Add a new language: <LanguageSelection id={props.id} />
+<UserLanguage id={props.id} />
+</div> */
+}
