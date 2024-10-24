@@ -17,6 +17,8 @@
 
 .languagelist {
   font-size: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .petitbtn {

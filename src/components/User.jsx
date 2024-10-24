@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import UpdateModal from "./UpdateModal";
-import UserLanguage from "./UserLanguage";
-import LanguageSelection from "./LanguageSelection";
 import styles from "./Userprofile.module.css";
 import UserLanguageColumn from "./UserLanguageColumn";
 
