@@ -114,7 +114,16 @@ const UserLanguageColumn = (props) => {
         })}
       </select>
       <br />
-      <button onClick={addUserLanguage} className={styles.petitbtn}>
+      <button
+        onClick={() => {
+          if (!userLanguages.includes(languageRef.current.value)) {
+            addUserLanguage();
+          } else {
+            alert("Language has already been selected");
+          }
+        }}
+        className={styles.petitbtn}
+      >
         Add
       </button>
       <div className="mb-5"></div>
